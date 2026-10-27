@@ -1,0 +1,28 @@
+input
+  charges = int
+  order = int
+
+
+process
+  if order < 100000 then
+    charges = 10000
+  else if order >= 100000 then
+    charges = 0
+
+  subtotal = subtotal + charges
+
+output
+  subtotal
+
+
+START
+    INPUT orderPrice
+
+    IF orderPrice < 100000
+      SET deliveryCharge = 10000
+    ELSE
+      SET deliveryCharge = 0
+    ENDIF
+    SET subtotal = deliveryCharge + orderPrice
+    OUTPUT subtotal
+END
